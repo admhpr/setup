@@ -8,5 +8,5 @@ WORKDIR /home/adam
 
 FROM new-machine
 COPY ../bootstrap.sh /usr/local/bin
-CMD chmod +x /usr/local/bin/bootstrap.sh
+RUN chmod +x /usr/local/bin/bootstrap.sh
 CMD ["./bootstrap.sh"]
