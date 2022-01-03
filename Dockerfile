@@ -19,4 +19,4 @@ WORKDIR /home/adam
 
 FROM new-machine
 COPY . .
-CMD ["sh", "-c", "ansible-playbook $TAGS local.yml"]
+CMD ["sh", "-c", "ansible-playbook $TAGS provision/setup.yml"]
