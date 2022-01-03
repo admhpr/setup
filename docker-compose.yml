@@ -5,4 +5,4 @@ services:
       context: .
       dockerfile: env/Dockerfile
     volumes:
-      - ./provision:/home/adam/ansible
+      - ./provision:/home/adam
