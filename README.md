@@ -2,7 +2,7 @@
 
 install ansible
 
-`./bootstrap-ansible.sh`
+`./bootstrap.sh`
 
 setup venv
 
