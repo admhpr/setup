@@ -2,6 +2,7 @@ version: "3.9"
 services:
   canary:
     build:
-      context: ./env 
+      context: .
+      dockerfile: env/Dockerfile
     volumes:
       - ./provision:/home/adam/ansible
