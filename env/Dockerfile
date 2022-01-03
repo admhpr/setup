@@ -1,4 +1,4 @@
-FROM ubuntu:focal
+FROM ubuntu:focal as canary
 WORKDIR /usr/local/bin
 ARG TAGS
 RUN addgroup --gid 1000 adam
