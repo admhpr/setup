@@ -4,8 +4,14 @@
     update_cache: yes
   become: true
 
-- name: Install development packages necessary for building Python
+- name: Install development packages necessary for setting up pyenv
   apt:
     pkg: "{{ pyenv_debian_packages }}"
     state: present
   become: true
+
+- name: Install PyEnv
+  git:
+    repo: https://github.com/pyenv/pyenv.git
+    dest: "{{ pyenv_path }}"
+    update: "{{ pyenv_update_git_install }}"
