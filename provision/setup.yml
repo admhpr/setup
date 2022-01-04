@@ -10,3 +10,7 @@
       - install
       - core
   tasks:
+    - import_tasks: tasks/dev/_main.yml
+      tags: ["dev"]
+    - import_tasks: tasks/shell/_main.yml
+      tags: ["shell"]
