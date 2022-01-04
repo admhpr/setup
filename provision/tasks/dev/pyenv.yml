@@ -1,4 +1,7 @@
 ---
+vars_files:
+  - vars/pyenv.yml
+tasks:
 - name: Ensure apt cache is up to date
   apt:
     update_cache: yes
