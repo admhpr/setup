@@ -1,5 +1,5 @@
 # =======================
 # Languages and runtimes
 # =======================
-- include: python.yml
+- include_tasks: python.yml
   tags: ["python"]
