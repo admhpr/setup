@@ -1,2 +1,2 @@
-- include_tasks: zsh.yml
+- import_tasks: zsh.yml
   tags: ["shell"]

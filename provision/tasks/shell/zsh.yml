@@ -1,22 +1,19 @@
----
-tasks:
-  - name: Install ZSH
-    apt: name=zsh
-    
-  - name: Change shell to zsh
-    shell: chsh -s $(which zsh)
+- name: Install ZSH
+  apt: name=zsh
+  
+- name: Change shell to zsh
+  shell: chsh -s $(which zsh)
+- name: Check that the <some>.conf exists
+  stat:
+    path: /home/adam/.oh-my-zsh
+  register: oh_my_stats
 
-  - name: Check that the <some>.conf exists
-    stat:
-      path: /home/adam/.oh-my-zsh
-    register: oh_my_stats
-
-  - name: Oh-My-Zsh
-    shell: curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh > ~/.oh-my-installer && chmod +x ~/.oh-my-installer && ~/.oh-my-installer
-    when: oh_my_stats.stat.exists == False
-    become_user: adam
-
-  - name: Install zsh-autosuggestions
-    ansible.builtin.git:
-      repo: 'https://github.com/zsh-users/zsh-autosuggestions.git'
-      dest: "~/.oh-my-zsh/plugins/zsh-autosuggestions"
+- name: Oh-My-Zsh
+  shell: curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh > ~/.oh-my-installer && chmod +x ~/.oh-my-installer && ~/.oh-my-installer
+  when: oh_my_stats.stat.exists == False
+  become_user: adam
+  
+- name: Install zsh-autosuggestions
+  ansible.builtin.git:
+    repo: 'https://github.com/zsh-users/zsh-autosuggestions.git'
+    dest: "~/.oh-my-zsh/plugins/zsh-autosuggestions"
