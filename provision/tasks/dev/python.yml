@@ -5,7 +5,7 @@ tasks:
 
   - name: Ensure apt cache is up to date
     apt:
-      update_cache: yes
+      update_cache: true
     become: true
 
   - name: Install development packages necessary for setting up pyenv

@@ -2,7 +2,7 @@
 tasks:
   - name: Install ZSH
     apt: name=zsh
-      
+    
   - name: Change shell to zsh
     shell: chsh -s $(which zsh)
 

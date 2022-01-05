@@ -16,3 +16,4 @@
     - name: Shell tasks
       import_tasks: tasks/shell/_main.yml
       tags: ["shell"]
+      
