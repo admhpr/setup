@@ -4,7 +4,7 @@ ARG DEBIAN_FRONTEND=noninteractive
 ENV TZ=Europe/Dublin
 RUN apt-get update && \
     apt-get install -y apt-utils 2>&1 | grep -v "debconf: delaying package configuration, since apt-utils is not installed" && \
-    apt-get install -y software-properties-common sudo
+    apt-get install -y curl git build-essential software-properties-common sudo
 
 FROM base AS canary
 ARG TAGS
