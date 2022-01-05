@@ -10,10 +10,10 @@
       - install
       - core
   tasks:
-    - name: Dev tasks
-      import_tasks: tasks/dev/_main.yml
-      tags: ["dev"]
     - name: Shell tasks
       import_tasks: tasks/shell/_main.yml
       tags: ["shell"]
+    - name: Dev tasks
+      import_tasks: tasks/dev/_main.yml
+      tags: ["dev"]
       
