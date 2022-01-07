@@ -1,0 +1,4 @@
+- name: Install nvm latest
+  git:
+    repo: https://github.com/creationix/nvm.git
+    dest: "{{ nvm_install_path }}"
