@@ -1,1 +1,2 @@
 node_version: "16.13.1"
+nvm_install_path: ~/.nvm
