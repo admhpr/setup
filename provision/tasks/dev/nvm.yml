@@ -2,3 +2,8 @@
   git:
     repo: https://github.com/creationix/nvm.git
     dest: "{{ nvm_install_path }}"
+
+- name: Install Node {{ nvm_node_version }}
+  shell: ". ./nvm.sh && nvm install {{ node_version }}"
+  args:
+    chdir: "{{ nvm_install_path }}"
