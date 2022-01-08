@@ -1,5 +1,7 @@
 # =======================
 # Languages and runtimes
 # =======================
-- import_tasks: python.yml
+- import_tasks: pyenv.yml
   tags: ["python"]
+- import_tasks: nvm.yml
+  tags: ["node"]
