@@ -1,12 +1,12 @@
-- name: Include variables
+- name: include variables
   include_vars: vars/nvm.yml
 
-- name: Install nvm latest
+- name: install nvm latest
   git:
     repo: https://github.com/creationix/nvm.git
     dest: "{{ nvm_install_path }}"
 
-- name: Install Node {{ nvm_node_version }}
+- name: install Node {{ nvm_node_version }}
   shell: ". ./nvm.sh && nvm install {{ node_version }}"
   args:
     chdir: "{{ nvm_install_path }}"
