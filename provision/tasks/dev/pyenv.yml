@@ -1,18 +1,18 @@
-- name: Include variables
+- name: include variables
   include_vars: vars/pyenv.yml
 
-- name: Ensure apt cache is up to date
+- name: ensure apt cache is up to date
   apt:
     update_cache: true
   become: true
 
-- name: Install development packages necessary for setting up pyenv
+- name: install development packages necessary for setting up pyenv
   apt:
     pkg: "{{ pyenv_debian_packages }}"
     state: present
   become: true
 
-- name: Install PyEnv
+- name: install PyEnv
   git:
     repo: https://github.com/pyenv/pyenv.git
     dest: "{{ pyenv_path }}"
