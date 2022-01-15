@@ -1,3 +1,6 @@
+- name: Include variables
+  include_vars: vars/nvm.yml
+
 - name: Install nvm latest
   git:
     repo: https://github.com/creationix/nvm.git
