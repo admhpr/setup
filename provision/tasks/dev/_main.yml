@@ -5,3 +5,9 @@
   tags: ["python"]
 - import_tasks: nvm.yml
   tags: ["node"]
+  
+# =======================
+#  Tooling
+# =======================
+- import_tasks: vscode.yml
+  tags: ["ide", "editor"]
