@@ -1,4 +1,7 @@
----
+
+- name: include variables
+  include_vars: vars/vscode.yml
+  
 - name: install dependencies
   become: yes
   apt:
