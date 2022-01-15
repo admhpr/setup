@@ -1,0 +1,8 @@
+---
+visual_studio_code_version: ''
+visual_studio_code_build: stable
+visual_studio_code_download_dir: "{{ x_ansible_download_dir | default(ansible_env.HOME + '/.ansible/tmp/downloads') }}"
+visual_studio_code_mirror: 'https://packages.microsoft.com'
+visual_studio_code_gpgcheck: yes
+visual_studio_code_skip_add_repo: no
+users: []
