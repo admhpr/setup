@@ -1,4 +1,4 @@
-- name: install ZSH
+- name: install zsh
   apt: name=zsh
   
 - name: change shell to zsh
